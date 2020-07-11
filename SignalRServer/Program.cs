@@ -23,7 +23,7 @@ namespace SignalRServer
                 IHubContext ctx = GlobalHost.ConnectionManager.GetHubContext<TestHub>();
 
                 string line = null;
-                while ((line = System.Console.ReadLine()) != null)
+                while ((line = Console.ReadLine()) != null)
                 {
                     string newMessage = $"<Server sent:> {line}";
                     ctx.Clients.All.MessageFromServer(newMessage);
