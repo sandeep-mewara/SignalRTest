@@ -17,7 +17,10 @@ namespace SignalRClient
             _hub.On("MessageFromServer", x => Console.WriteLine(x));
             _hub.On("ResponseToClientMessage", x => Console.WriteLine(x));
 
+            Console.WriteLine($"============ CLIENT ============");
             Console.WriteLine("Type any message - it will be sent as a request to server for a response.");
+            Console.WriteLine($"================================");
+
             string line = null;
             while ((line = Console.ReadLine()) != null)
             {

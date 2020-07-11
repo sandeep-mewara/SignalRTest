@@ -12,9 +12,11 @@ namespace SignalRServer
 
             using (WebApp.Start<Startup>(url))
             {
+                Console.WriteLine($"============ SERVER ============");
                 Console.WriteLine($"Server running at {url}");
-                Console.WriteLine("Wait for clients message requests for server to respond OR " +
-                    "Type any message - it will be broadcast to all clients.");
+                Console.WriteLine("Wait for clients message requests for server to respond OR");
+                Console.WriteLine("Type any message - it will be broadcast to all clients.");
+                Console.WriteLine($"================================");
 
                 // For server broadcast test
                 // Get hub context 
